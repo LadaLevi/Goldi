@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Golden Retriever bemutatása</title>
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <h1>A Golden Retriever bemutatása</h1>
+
+    <nav>
+        <a href="#" onclick="showContent('home')">Kezdőlap</a>
+        <a href="#" onclick="showContent('tipusok')">Típusok</a>
+    </nav>
+
+    <div id="home" class="content active">
+        <p>Üdvözöljük a Golden Retriever bemutató oldalon!</p>
+
+        <table>
+            <caption>A Golden Retriever típusai</caption>
+            <tr>
+                <th>Típus</th>
+                <th>Típus leírása</th>
+            </tr>
+            <tr>
+                <td>Munkatípus</td>
+                <td>Könnyedebb felépítésű. Vékonyabb, hosszabb fej, sötétebb szőrszín, élénk temperamentum, karcsúbb, rugalmasabb, gyorsabb.</td>
+            </tr>
+            <tr class="highlight">
+                <td>Kiállítási típus</td>
+                <td>Dúsabb, hosszabb szőrzet, robusztusabb felépítés, világosabb szőrszín, határozottabb.</td>
+            </tr>
+            <tr>
+                <td>Európai típus</td>
+                <td>Szőrszíne az arany világosabb árnyalata. Rövidebb szőrű, mint az amerikai. Lába rövidebb az amerikaiénál, így megjelenése zömökebb. Jól pigmentált. 33 szögelési előírás, 145 szögelési elöl.</td>
+            </tr>
+            <tr class="highlight">
+                <td>Amerikai típus</td>
+                <td>Orr és fej része finomabb. Színe középarany, rézvörös, de sötét sem ritka. Mellől szögelése szerényebb, hátul olykor túlszögelt.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="tipusok" class="content">
+        <h2 style="color: #800000;">Típusok</h2>
+
+        <div class="images-section">
+            <h3>Képek a típusokról:</h3>
+            <img src="goldi.jpg" alt="Goldi" width="100px">
+            <img src="kolyok.jpg" alt="Kölyök" width="100px">
+            <img src="mancs.png" alt="Mancs" width="100px">
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <p>Forrás: <a href="https://hu.wikipedia.org/wiki/Golden_retriever" target="_blank">https://hu.wikipedia.org/wiki/Golden_retriever</a></p>
+        <p><a href="#" onclick="showContent('home')">Vissza az oldal tetejére</a></p>
+    </div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+    }
+    h1 {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+    nav a {
+        color: blue;
+        text-decoration: none;
+        margin-right: 15px;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #800000;
+        color: white;
+    }
+    tr.highlight {
+        background-color: #d3d3d3;
+    }
+    caption {
+        font-weight: bold;
+        font-size: 1.2em;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+    .footer-links {
+        margin-top: 20px;
+    }
+    .images-section img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    .content {
+        display: none;
+    }
+    .content.active {
+        display: block;
+    }
+</style>
+</html>
+
